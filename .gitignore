@@ -1,0 +1,32 @@
+# macOS
+.DS_Store
+
+# editors
+.idea/
+.vscode/
+
+# environment
+.env
+.env.*
+!.env.example
+backend/.env
+frontend/.env
+frontend/.env.*
+
+# frontend
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/build/
+frontend/coverage/
+frontend/.vercel/
+frontend/*.tsbuildinfo
+
+# backend
+backend/api
+backend/coverage.out
+backend/bin/
+
+# local caches
+.tmp/
+tmp/
