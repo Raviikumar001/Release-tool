@@ -31,7 +31,7 @@ func NewServer(cfg config.Config, pool *pgxpool.Pool) *echo.Echo {
 	e.Use(middleware.Recover())
 	e.Use(middleware.TimeoutWithConfig(middleware.TimeoutConfig{Timeout: 15 * time.Second}))
 	e.Use(middleware.CORSWithConfig(middleware.CORSConfig{
-		AllowOrigins: []string{cfg.AllowedOrigin},
+		AllowOrigins: []string{cfg.AllowedOrigin, "https://release-tool-bice.vercel.app"},
 		AllowMethods: []string{http.MethodGet, http.MethodPost, http.MethodPatch, http.MethodDelete, http.MethodOptions},
 		AllowHeaders: []string{echo.HeaderOrigin, echo.HeaderContentType, echo.HeaderAccept},
 	}))
